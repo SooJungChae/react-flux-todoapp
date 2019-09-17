@@ -4,6 +4,7 @@ function AppView(props) {
     return (
         <div>
             <Header {...props}></Header>
+            <NewTodo {...props}/>
             <Main {...props}></Main>
             <Footer {...props}></Footer>
         </div>
@@ -16,6 +17,29 @@ function Header(props) {
             <h1>todos</h1>
         </header>
     );
+}
+
+function NewTodo(props) {
+    return (
+        <section id="new-todo">
+            <input
+                type="input"
+                className="toggle"
+                value={props.todoDraft}
+                onChange={
+                    e => {props.onUpdateDraft(e.target.value)}
+                }
+            />
+            <button className="newTodo"
+                    onClick={
+                        () => {
+                            props.onAddTodo(props.todoDraft)
+                            props.onUpdateDraft('')
+                        }
+                    }
+            >Add!</button>
+        </section>
+    )
 }
 
 function Main(props) {

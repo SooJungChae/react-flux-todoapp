@@ -21,6 +21,13 @@ const Actions = {
             type: TodoActionTypes.TOGGLE_TODO,
             id
         });
+    },
+
+    updateDraft(text) {
+        TodoDispatcher.dispatch({
+            type: TodoActionTypes.UPDATE_DRAFT,
+            text
+        })
     }
 };
 
