@@ -4,3 +4,4 @@ lib
 website/src/flux/docs/
 website/core/metadata.js
 flow/include
+.idea

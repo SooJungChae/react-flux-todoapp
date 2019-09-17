@@ -76,7 +76,9 @@
     ],
     "rootDir": "./",
     "scriptPreprocessor": "scripts/jest/preprocessor.js",
-    "setupFiles": ["scripts/jest/environment.js"],
+    "setupFiles": [
+      "scripts/jest/environment.js"
+    ],
     "testPathDirs": [
       "<rootDir>/src"
     ]
